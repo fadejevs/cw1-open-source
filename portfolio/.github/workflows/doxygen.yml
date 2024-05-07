@@ -1,0 +1,33 @@
+name: Generate Doxygen Documentation
+
+on:
+  push:
+    branches:
+      - main 
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Doxygen
+      run: sudo apt-get -y install doxygen 
+
+    - name: Generate Documentation
+      run: |
+        doxygen path/to/your/Doxyfile
+        mv html /path/to/where/you/want/to/store/docs
+      working-directory: cw1-open-source
+
+    - name: Commit Documentation Changes
+      uses: EndBug/add-and-commit@v7
+      with:
+        add: 'docs'
+        message: 'Auto-generated documentation'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
