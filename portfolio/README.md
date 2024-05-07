@@ -1,13 +1,11 @@
 # CW1 Open-Source Development
 
-This repository contains the code for the four worksheets of the portfolio.
+This repository contains the code for the respective worksheets of the portfolio submission for CW1 Open Source Development.
 
 ##
 
-a. Correct use of git commands (add, commit, push, pull, branch, clone)
-b. Python code + adding a unit test action + running it
-c. Showcase of bug tracking with Github
-d. Using Doxygen to generate documentation for python code
-
-
-
+Worksheet 2. Python code + adding a unit test action + running it
+##
+Worksheet 3. Showcase of bug tracking with Github
+##
+Worksheet 4. Using Doxygen to generate documentation for python code
